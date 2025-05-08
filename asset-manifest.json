@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/milgor931/milana-portfolio/static/css/main.87d673bb.css",
+    "main.js": "/milgor931/milana-portfolio/static/js/main.667be1b6.js",
+    "static/js/453.41aca250.chunk.js": "/milgor931/milana-portfolio/static/js/453.41aca250.chunk.js",
+    "index.html": "/milgor931/milana-portfolio/index.html",
+    "main.87d673bb.css.map": "/milgor931/milana-portfolio/static/css/main.87d673bb.css.map",
+    "main.667be1b6.js.map": "/milgor931/milana-portfolio/static/js/main.667be1b6.js.map",
+    "453.41aca250.chunk.js.map": "/milgor931/milana-portfolio/static/js/453.41aca250.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.87d673bb.css",
+    "static/js/main.667be1b6.js"
+  ]
+}
