@@ -1,0 +1,201 @@
+/* src/Navbar.css */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    /* background: rgba(0, 0, 0, 0.5); */
+    background-color: black;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.logo {
+    margin-left: 20px;
+}
+
+.logo h1 a {
+    color: white;
+    font-family: "Italiana", sans-serif;
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 1.5rem;
+}
+
+.nav-links ul {
+    list-style: none;
+    display: flex;
+    margin-right: 20px;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links span, a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-family: "Italiana", "Lato", sans-serif;
+    font-weight: bolder;
+    transition: color 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.nav-links span:hover {
+    font-weight: 400;
+    color: rgb(255, 68, 121);
+}
+
+/* Mobile Menu Styles */
+.menu-toggle {
+    display: none;
+    background: none;
+    color: white;
+    border: none;
+    font-size: 2.5rem;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links.mobile {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    background-color:  rgb(255, 68, 121);
+    width: 250px;
+    height: 100%;
+    text-align: left;
+    padding: 20px;
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-links.mobile ul {
+    display: block;
+}
+
+.nav-links.mobile li {
+    margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-right: 20px;
+    }
+}
+
+.nav-links.mobile.active {
+    right: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+.nav-links.mobile.active ul li a {
+    font-size: 1rem;
+}
+
+.nav-links.mobile .indented {
+    margin-left: 20px;
+}
+
+/* Overlay Styles */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 9;
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(255, 68, 121, 0.9);
+    list-style: none;
+    text-align: left;
+    padding: 10px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-width: 50px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    z-index: 10001;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.dropdown-menu li {
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.dropdown-menu a:hover {
+    color: black;
+}
+
+/* Mobile Dropdown */
+.nav-links.mobile .dropdown-menu {
+    position: relative;
+    background-color: transparent;
+    box-shadow: none;
+    padding-left: 20px;
+}
+
+.nav-links.mobile .dropdown-menu a {
+    font-size: 1rem;
+}
+
+/* Ensure dropdowns work on touchscreens */
+@media (max-width: 768px) {
+    .dropdown-menu {
+        position: relative;
+        opacity: 1;
+        visibility: visible;
+        background-color: rgba(255, 68, 121, 0.9);
+        margin-top: 5px;
+        border-radius: 5px;
+    }
+}

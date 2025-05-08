@@ -1,0 +1,118 @@
+.showcase-container {
+    margin: 0 auto;
+    padding: 4rem 1rem;
+    background-color: black;
+    color: white;
+}
+
+.project-card {
+    border-radius: 1rem;
+    padding: 1rem 10rem;
+    margin-bottom: 4rem;
+    transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .project-card {
+        padding: 1rem 2rem;
+        margin-bottom: 1rem;
+    }
+}
+
+.project-title {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.1rem;
+    color: rgb(255, 68, 121);
+    text-shadow: 3px 2px 2px rgb(94, 0, 0);
+}
+
+.project-subtitle {
+    font-size: 1rem;
+    color: #aaa;
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+    font-family: "Lato", "Gill Sans";
+}
+
+.project-description {
+    margin-bottom: 1.5rem;
+    white-space: pre-line;
+    transition: transform 0.3s ease-in-out;
+    font-family: "Lato", "Gill Sans";
+}
+
+.learn-more-button {
+    background: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-size: 0.7rem;
+    cursor: pointer;
+    border-radius: 1rem;
+    transition: background 0.3s ease, color 0.3s ease;
+    margin: 20px 0px;
+}
+
+.learn-more-button:hover {
+    background: #fff;
+    color: #000;
+}
+
+.credits {
+    font-size: 0.9rem;
+    color: #ccc;
+    margin-bottom: 1.5rem;
+    font-family: "Lato", "Gill Sans";
+}
+
+.credits p {
+    margin: 0.3rem 0;
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+}
+
+.image-gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.image-gallery img:hover {
+    transform: scale(1.05);
+}
+
+.no-images {
+    text-align: center;
+    font-style: italic;
+    color: #777;
+}
